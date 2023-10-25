@@ -131,7 +131,7 @@
         console.log(playersData)
     }
 
-
+//-----Creating table for scoring leaders---//
     function getScoringLeaders() { 
         $.get(`https://nba-stats-db.herokuapp.com/api/playerdata/topscorers/total/season/2023/`, (data) => {
             const table = document.createElement('table');
@@ -151,19 +151,18 @@
                 const { PTS, player_name } = data.results[i];
     
                 const row = tableBody.insertRow(i);
-                row.insertCell(0).textContent = i + 1; // Rank
-                row.insertCell(1).textContent = player_name; // Player Name
-                row.insertCell(2).textContent = PTS; // PTS
+                row.insertCell(0).textContent = i + 1; 
+                row.insertCell(1).textContent = player_name; 
+                row.insertCell(2).textContent = PTS; 
             }
     
-            // Append the table to the document or a specific container element
             document.body.appendChild(table);
         });
     }
     
 
 
-                   
+    //---create table to store player data---//
     function createPlayerTable(player_name, team, PTS, AST, TRB, three_percent, ft_percent, games, ptsClass, astClass, rbdClass, threeClass, freeClass) {
         return `
             <table>
@@ -199,7 +198,7 @@
         `;
     }
 
-   
+   //-----compare player stats----//
     function comparePlayers() {
         const player1 = playersData.player1;
         const player2 = playersData.player2;
@@ -210,7 +209,7 @@
             return;
         }
     
-        // Compare player statistics
+       
         if (player1.PTS > player2.PTS) {
             document.querySelector('.pts1').style.color = 'green'
             document.querySelector('.pts2').style.color = 'red';
@@ -267,5 +266,5 @@
         }
 
        
-        // You can add similar comparisons for other statistics like AST, TRB, three_percent, and ft_percent.
+        
     }
