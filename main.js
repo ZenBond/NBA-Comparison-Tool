@@ -7,6 +7,7 @@
     const btn2 = document.querySelector('#btn2')
     const clear = document.querySelector('#clear')
     const scoringLeaders = document.querySelector('#top-scores')
+    let clickCount = 0;
     const playersData = {
         player1: {},
         player2: {}
@@ -154,6 +155,21 @@
                 row.insertCell(0).textContent = i + 1; 
                 row.insertCell(1).textContent = player_name; 
                 row.insertCell(2).textContent = PTS; 
+
+
+                row.addEventListener('click', () => {
+                    clickCount++
+                       if (clickCount === 1) {
+                        input1.value = player_name
+                       } else if (clickCount === 2){
+                        input2.value = player_name
+                        clickCount = 0
+                       }
+                })
+                
+                
+                
+
             }
     
             document.body.appendChild(table);
@@ -204,11 +220,6 @@
         const player2 = playersData.player2;
         
     
-        if (Object.keys(player1).length === 0 || Object.keys(player2).length === 0) {
-            alert("Please enter data for both players before comparing.");
-            return;
-        }
-    
        
         if (player1.PTS > player2.PTS) {
             document.querySelector('.pts1').style.color = 'green'
@@ -254,7 +265,7 @@
             document.querySelector('.threep2').style.color = 'grey';
         }
 
-        if (player1.ft_percent > player2.ft_percent_percent) {
+        if (player1.ft_percent > player2.ft_percent) {
             document.querySelector('.free1').style.color = 'green';
             document.querySelector('.free2').style.color = 'red';
         } else if (player1.ft_percent < player2.ft_percent) {
