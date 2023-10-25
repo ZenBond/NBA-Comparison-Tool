@@ -1,6 +1,7 @@
 
     //---global variables----//
     const input1 = document.querySelector('#input1')
+    const body = document.querySelector('body')
     const input2 = document.querySelector('#input2')
     const btn1 = document.querySelector('#btn1')
     const btn2 = document.querySelector('#btn2')
@@ -13,16 +14,22 @@
 
    
     
-    //----event to submit players----//
+    //----event listners on buttons ----//
    
     compare.addEventListener('click', () => {
         getPlayerData1()
         getPlayerData2()
         comparePlayers()
     })
+
     scoringLeaders.addEventListener('click', getScoringLeaders)
 
-
+    clear.addEventListener('click', () => {
+        const existingTable = document.querySelector('table');
+        if (existingTable) {
+            existingTable.remove();
+        }
+    });
     
 //---keydown event input 1---//
     input1.addEventListener('keydown', (e) => {
@@ -47,6 +54,7 @@
         
 
         $.get(`https://nba-stats-db.herokuapp.com/api/playerdata/name/${input1.value}`, (data) => {    
+            
             
         if (data.results && data.results.length > 0) {
 
@@ -124,15 +132,35 @@
     }
 
 
-
-    function getScoringLeaders() {
+    function getScoringLeaders() { 
         $.get(`https://nba-stats-db.herokuapp.com/api/playerdata/topscorers/total/season/2023/`, (data) => {
+            const table = document.createElement('table');
+            const tableHeader = table.createTHead();
+            const headerRow = tableHeader.insertRow(0);
+    
+            const headers = ['Rank', 'Player Name', 'PTS'];
+            headers.forEach((headerText) => {
+                const th = document.createElement('th');
+                th.textContent = headerText;
+                headerRow.appendChild(th);
+            });
+    
+            const tableBody = table.createTBody();
+    
             for (let i = 0; i < 10 && i < data.results.length; i++) {
-                const {PTS, player_name} = data.results[i]
-                console.log(player_name)
+                const { PTS, player_name } = data.results[i];
+    
+                const row = tableBody.insertRow(i);
+                row.insertCell(0).textContent = i + 1; // Rank
+                row.insertCell(1).textContent = player_name; // Player Name
+                row.insertCell(2).textContent = PTS; // PTS
             }
-        })
+    
+            // Append the table to the document or a specific container element
+            document.body.appendChild(table);
+        });
     }
+    
 
 
                    
