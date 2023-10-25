@@ -5,22 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <link rel="stylesheet" href="main.css" />
   </head>
   <body>
     <div id="big-container">
       <div id="player-card" class="player-card">
-        <input type="text" id="input1" />
+        <input type="text" id="input1" placeholder="Player 1" />
         <button id="btn1">Submit</button>
         <div id="player-name"></div>
       </div>
       <div id="player-card2" class="player-card">
-        <input type="text" name="" id="input2" />
+        <input type="text" name="" id="input2" placeholder="Player 2" />
         <button id="btn2">Submit</button>
         <div id="player-name2"></div>
       </div>
+      <button id="clear">Clear</button>
     </div>
+
     <script src="main.js"></script>
   </body>
 </html>
