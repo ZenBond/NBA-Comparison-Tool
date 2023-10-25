@@ -6,10 +6,25 @@
 }
 
 
-.green-text {
-    color: green;
+table {
+    border-collapse: collapse;
+    width: 100%;
 }
 
-.red-text {
-    color: red;
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
 }
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+
+
