@@ -71,7 +71,7 @@
             console.log(data.results)
             const playerName = document.querySelector('#player-name')
             
-            playerName.innerHTML = playerName.innerHTML = createPlayerTable(player_name, team, PTS, AST, TRB, three_percent, ft_percent, games, 'pts1');
+            playerName.innerHTML = createPlayerTable(player_name, team, PTS, AST, TRB, three_percent, ft_percent, games, 'pts1', 'ast1', 'rbd1', 'threep1', 'free1');
             
             console.log(player2)
         
@@ -111,7 +111,7 @@
                 
                 const playerName2 = document.querySelector('#player-name2')
                 
-                playerName2.innerHTML = createPlayerTable(player_name, team, PTS, AST, TRB, three_percent, ft_percent, games, 'pts2');
+                playerName2.innerHTML = createPlayerTable(player_name, team, PTS, AST, TRB, three_percent, ft_percent, games, 'pts2', 'ast2', 'rbd2', 'threep2', 'free2');
 
                 
             } else {
@@ -136,7 +136,7 @@
 
 
                    
-    function createPlayerTable(player_name, team, PTS, AST, TRB, three_percent, ft_percent, games, ptsClass) {
+    function createPlayerTable(player_name, team, PTS, AST, TRB, three_percent, ft_percent, games, ptsClass, astClass, rbdClass, threeClass, freeClass) {
         return `
             <table>
                 <tr>
@@ -153,19 +153,19 @@
                 </tr>
                 <tr>
                     <th>APG</th>
-                    <td>${(AST / games).toFixed(1)}</td>
+                    <td class="${astClass}">${(AST / games).toFixed(1)}</td>
                 </tr>
                 <tr>
                     <th>RPG</th>
-                    <td>${(TRB / games).toFixed(1)}</td>
+                    <td class="${rbdClass}">${(TRB / games).toFixed(1)}</td>
                 </tr>
                 <tr>
                     <th>3P%</th>
-                    <td>${Number(three_percent).toFixed(2)}%</td>
+                    <td class="${threeClass}">${Number(three_percent).toFixed(2)}%</td>
                 </tr>
                 <tr>
                     <th>FT%</th>
-                    <td>${Number(ft_percent).toFixed(2)}%</td>
+                    <td class="${freeClass}">${Number(ft_percent).toFixed(2)}%</td>
                 </tr>
             </table>
         `;
@@ -175,8 +175,7 @@
     function comparePlayers() {
         const player1 = playersData.player1;
         const player2 = playersData.player2;
-        const pts1 = document.querySelector('.pts1')
-        const pts2 = document.querySelector('.pts2')
+        
     
         if (Object.keys(player1).length === 0 || Object.keys(player2).length === 0) {
             alert("Please enter data for both players before comparing.");
@@ -185,18 +184,60 @@
     
         // Compare player statistics
         if (player1.PTS > player2.PTS) {
-            alert(`${player1.player_name} has more points per game (PPG) than ${player2.player_name}.`);
             document.querySelector('.pts1').style.color = 'green'
             document.querySelector('.pts2').style.color = 'red';
         } else if (player1.PTS < player2.PTS) {
-            alert(`${player2.player_name} has more points per game (PPG) than ${player1.player_name}.`);
             document.querySelector('.pts1').style.color = 'red'
             document.querySelector('.pts2').style.color = 'green';
         } else {
-            alert(`${player1.player_name} and ${player2.player_name} have the same points per game (PPG).`);
             document.querySelector('.pts1').style.color = 'grey'
             document.querySelector('.pts2').style.color = 'grey';
         }
     
+        if (player1.AST > player2.AST) {
+            document.querySelector('.ast1').style.color = 'green';
+            document.querySelector('.ast2').style.color = 'red';
+        } else if (player1.AST < player2.AST) {
+            document.querySelector('.ast1').style.color = 'red';
+            document.querySelector('.ast2').style.color = 'green';
+        } else {
+            document.querySelector('.ast1').style.color = 'grey';
+            document.querySelector('.ast2').style.color = 'grey';
+        }
+
+        if (player1.TRB > player2.TRB) {
+            document.querySelector('.rbd1').style.color = 'green';
+            document.querySelector('.rbd2').style.color = 'red';
+        } else if (player1.TRB < player2.TRB) {
+            document.querySelector('.rbd1').style.color = 'red';
+            document.querySelector('.rbd2').style.color = 'green';
+        } else {
+            document.querySelector('.rbd1').style.color = 'grey';
+            document.querySelector('.rbd2').style.color = 'grey';
+        }
+
+        if (player1.three_percent > player2.three_percent) {
+            document.querySelector('.threep1').style.color = 'green';
+            document.querySelector('.threep2').style.color = 'red';
+        } else if (player1.three_percent < player2.three_percent) {
+            document.querySelector('.threep1').style.color = 'red';
+            document.querySelector('.threep2').style.color = 'green';
+        } else {
+            document.querySelector('.threep1').style.color = 'grey';
+            document.querySelector('.threep2').style.color = 'grey';
+        }
+
+        if (player1.ft_percent > player2.ft_percent_percent) {
+            document.querySelector('.free1').style.color = 'green';
+            document.querySelector('.free2').style.color = 'red';
+        } else if (player1.ft_percent < player2.ft_percent) {
+            document.querySelector('.free1').style.color = 'red';
+            document.querySelector('.free2').style.color = 'green';
+        } else {
+            document.querySelector('.free1').style.color = 'grey';
+            document.querySelector('.free2').style.color = 'grey';
+        }
+
+       
         // You can add similar comparisons for other statistics like AST, TRB, three_percent, and ft_percent.
     }
