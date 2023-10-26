@@ -23,8 +23,6 @@
     //----event listners on buttons ----//
    
     compare.addEventListener('click', () => {
-        getPlayerData1()
-        getPlayerData2()
         comparePlayers()
     })
 
@@ -231,55 +229,55 @@
     
        
         if (player1.PTS > player2.PTS) {
-            document.querySelector('.pts1').style.backgroundColor = 'green'
-            document.querySelector('.pts2').style.backgroundColor = 'red';
+            document.querySelector('.pts1').style.backgroundColor = '#00ff7f'
+            document.querySelector('.pts2').style.backgroundColor = '#B22222';
         } else if (player1.PTS < player2.PTS) {
-            document.querySelector('.pts1').style.backgroundColor = 'red'
-            document.querySelector('.pts2').style.backgroundColor = 'green';
+            document.querySelector('.pts1').style.backgroundColor = '#B22222'
+            document.querySelector('.pts2').style.backgroundColor = '#00ff7f';
         } else {
             document.querySelector('.pts1').style.color = 'grey'
             document.querySelector('.pts2').style.color = 'grey';
         }
     
         if (player1.AST > player2.AST) {
-            document.querySelector('.ast1').style.backgroundColor = 'green';
-            document.querySelector('.ast2').style.backgroundColor = 'red';
+            document.querySelector('.ast1').style.backgroundColor = '#00ff7f';
+            document.querySelector('.ast2').style.backgroundColor = '#B22222';
         } else if (player1.AST < player2.AST) {
-            document.querySelector('.ast1').style.backgroundColor = 'red';
-            document.querySelector('.ast2').style.backgroundColor = 'green';
+            document.querySelector('.ast1').style.backgroundColor = '#B22222';
+            document.querySelector('.ast2').style.backgroundColor = '#00ff7f';
         } else {
             document.querySelector('.ast1').style.color = 'grey';
             document.querySelector('.ast2').style.color = 'grey';
         }
 
         if (player1.TRB > player2.TRB) {
-            document.querySelector('.rbd1').style.backgroundColor = 'green';
-            document.querySelector('.rbd2').style.backgroundColor = 'red';
+            document.querySelector('.rbd1').style.backgroundColor = '#00ff7f';
+            document.querySelector('.rbd2').style.backgroundColor = '#B22222';
         } else if (player1.TRB < player2.TRB) {
-            document.querySelector('.rbd1').style.backgroundColor = 'red';
-            document.querySelector('.rbd2').style.backgroundColor = 'green';
+            document.querySelector('.rbd1').style.backgroundColor = '#B22222';
+            document.querySelector('.rbd2').style.backgroundColor = '#00ff7f';
         } else {
             document.querySelector('.rbd1').style.color = 'grey';
             document.querySelector('.rbd2').style.color = 'grey';
         }
 
         if (player1.three_percent > player2.three_percent) {
-            document.querySelector('.threep1').style.backgroundColor = 'green';
-            document.querySelector('.threep2').style.backgroundColor = 'red';
+            document.querySelector('.threep1').style.backgroundColor = '#00ff7f';
+            document.querySelector('.threep2').style.backgroundColor = '#B22222';
         } else if (player1.three_percent < player2.three_percent) {
-            document.querySelector('.threep1').style.backgroundColor = 'red';
-            document.querySelector('.threep2').style.backgroundColor = 'green';
+            document.querySelector('.threep1').style.backgroundColor = '#B22222';
+            document.querySelector('.threep2').style.backgroundColor = '#00ff7f';
         } else {
             document.querySelector('.threep1').style.color = 'grey';
             document.querySelector('.threep2').style.color = 'grey';
         }
 
         if (player1.ft_percent > player2.ft_percent) {
-            document.querySelector('.free1').style.backgroundColor = 'green';
-            document.querySelector('.free2').style.backgroundColor = 'red';
+            document.querySelector('.free1').style.backgroundColor = '#00ff7f';
+            document.querySelector('.free2').style.backgroundColor = '#B22222';
         } else if (player1.ft_percent < player2.ft_percent) {
-            document.querySelector('.free1').style.backgroundColor = 'red';
-            document.querySelector('.free2').style.backgroundColor = 'green';
+            document.querySelector('.free1').style.backgroundColor = '#B22222';
+            document.querySelector('.free2').style.backgroundColor = '#00ff7f';
         } else {
             document.querySelector('.free1').style.color = 'grey';
             document.querySelector('.free2').style.color = 'grey';

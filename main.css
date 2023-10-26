@@ -62,10 +62,11 @@ table {
 }
 
 th, td {
-    border-radius: 20px;
+    border-radius: 5px;
     padding: 8px;
     text-align: left;
     color: black;
+    border: 1.5px solid #1b191a;
     
 }
 
@@ -115,8 +116,8 @@ img {
     display: flex;
     flex-direction: row;
     column-gap: 60px;
-    margin-left: 30px;
-    margin-top: -380px;
+    margin-left: 25px;
+    margin-top: -390px;
     z-index: 198;
 }
 
