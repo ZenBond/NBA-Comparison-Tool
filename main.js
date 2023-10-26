@@ -6,6 +6,9 @@
     const btn1 = document.querySelector('#btn1')
     const btn2 = document.querySelector('#btn2')
     const clear = document.querySelector('#clear')
+    const compare = document.querySelector('#compare')
+    const boombox = document.querySelector(".boombox");
+    const music = document.querySelector("#music");
     const imageGrid = document.querySelector('#image-grid')
     const scoringLeaders = document.querySelector('#top-scores')
    
@@ -164,8 +167,10 @@
                     clickCount++
                        if (clickCount === 1) {
                         input1.value = player_name
+                        getPlayerData1()
                        } else if (clickCount === 2){
                         input2.value = player_name
+                        getPlayerData2()
                         clickCount = 0
                 
                        }
@@ -237,44 +242,44 @@
         }
     
         if (player1.AST > player2.AST) {
-            document.querySelector('.ast1').style.color = 'green';
-            document.querySelector('.ast2').style.color = 'red';
+            document.querySelector('.ast1').style.backgroundColor = 'green';
+            document.querySelector('.ast2').style.backgroundColor = 'red';
         } else if (player1.AST < player2.AST) {
-            document.querySelector('.ast1').style.color = 'red';
-            document.querySelector('.ast2').style.color = 'green';
+            document.querySelector('.ast1').style.backgroundColor = 'red';
+            document.querySelector('.ast2').style.backgroundColor = 'green';
         } else {
             document.querySelector('.ast1').style.color = 'grey';
             document.querySelector('.ast2').style.color = 'grey';
         }
 
         if (player1.TRB > player2.TRB) {
-            document.querySelector('.rbd1').style.color = 'green';
-            document.querySelector('.rbd2').style.color = 'red';
+            document.querySelector('.rbd1').style.backgroundColor = 'green';
+            document.querySelector('.rbd2').style.backgroundColor = 'red';
         } else if (player1.TRB < player2.TRB) {
-            document.querySelector('.rbd1').style.color = 'red';
-            document.querySelector('.rbd2').style.color = 'green';
+            document.querySelector('.rbd1').style.backgroundColor = 'red';
+            document.querySelector('.rbd2').style.backgroundColor = 'green';
         } else {
             document.querySelector('.rbd1').style.color = 'grey';
             document.querySelector('.rbd2').style.color = 'grey';
         }
 
         if (player1.three_percent > player2.three_percent) {
-            document.querySelector('.threep1').style.color = 'green';
-            document.querySelector('.threep2').style.color = 'red';
+            document.querySelector('.threep1').style.backgroundColor = 'green';
+            document.querySelector('.threep2').style.backgroundColor = 'red';
         } else if (player1.three_percent < player2.three_percent) {
-            document.querySelector('.threep1').style.color = 'red';
-            document.querySelector('.threep2').style.color = 'green';
+            document.querySelector('.threep1').style.backgroundColor = 'red';
+            document.querySelector('.threep2').style.backgroundColor = 'green';
         } else {
             document.querySelector('.threep1').style.color = 'grey';
             document.querySelector('.threep2').style.color = 'grey';
         }
 
         if (player1.ft_percent > player2.ft_percent) {
-            document.querySelector('.free1').style.color = 'green';
-            document.querySelector('.free2').style.color = 'red';
+            document.querySelector('.free1').style.backgroundColor = 'green';
+            document.querySelector('.free2').style.backgroundColor = 'red';
         } else if (player1.ft_percent < player2.ft_percent) {
-            document.querySelector('.free1').style.color = 'red';
-            document.querySelector('.free2').style.color = 'green';
+            document.querySelector('.free1').style.backgroundColor = 'red';
+            document.querySelector('.free2').style.backgroundColor = 'green';
         } else {
             document.querySelector('.free1').style.color = 'grey';
             document.querySelector('.free2').style.color = 'grey';
@@ -353,3 +358,29 @@
         updateCells()
     }, 10000)
     
+
+//----Creator Box------//
+    function createInfoBox() {
+        const infoBox = document.createElement('div');
+        infoBox.id = 'infoBox';
+        infoBox.innerHTML = `
+            <h3>Curated by Zoi</h3>
+            <p><a href="https://github.com/ZenBond/frontend-project">View this project in Github</a></p>
+        `;
+        document.body.appendChild(infoBox);
+      }
+
+      createInfoBox()
+
+
+
+   
+          
+    //-----background music----//
+    boombox.addEventListener("click", function () {
+        if (music.paused) {
+              music.play();
+        } else {
+              music.pause();
+        }
+    });
