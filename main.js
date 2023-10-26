@@ -6,7 +6,9 @@
     const btn1 = document.querySelector('#btn1')
     const btn2 = document.querySelector('#btn2')
     const clear = document.querySelector('#clear')
+    const imageGrid = document.querySelector('#image-grid')
     const scoringLeaders = document.querySelector('#top-scores')
+   
     let clickCount = 0;
     const playersData = {
         player1: {},
@@ -136,6 +138,7 @@
     function getScoringLeaders() { 
         $.get(`https://nba-stats-db.herokuapp.com/api/playerdata/topscorers/total/season/2023/`, (data) => {
             const table = document.createElement('table');
+            table.classList.add('scoring-leaders')
             const tableHeader = table.createTHead();
             const headerRow = tableHeader.insertRow(0);
     
@@ -164,6 +167,7 @@
                        } else if (clickCount === 2){
                         input2.value = player_name
                         clickCount = 0
+                
                        }
                 })
                 
@@ -181,7 +185,7 @@
     //---create table to store player data---//
     function createPlayerTable(player_name, team, PTS, AST, TRB, three_percent, ft_percent, games, ptsClass, astClass, rbdClass, threeClass, freeClass) {
         return `
-            <table>
+            <table class="basketball-card">
                 <tr>
                     <th>Player Name</th>
                     <td>${player_name}</td>
@@ -222,11 +226,11 @@
     
        
         if (player1.PTS > player2.PTS) {
-            document.querySelector('.pts1').style.color = 'green'
-            document.querySelector('.pts2').style.color = 'red';
+            document.querySelector('.pts1').style.backgroundColor = 'green'
+            document.querySelector('.pts2').style.backgroundColor = 'red';
         } else if (player1.PTS < player2.PTS) {
-            document.querySelector('.pts1').style.color = 'red'
-            document.querySelector('.pts2').style.color = 'green';
+            document.querySelector('.pts1').style.backgroundColor = 'red'
+            document.querySelector('.pts2').style.backgroundColor = 'green';
         } else {
             document.querySelector('.pts1').style.color = 'grey'
             document.querySelector('.pts2').style.color = 'grey';
@@ -279,3 +283,73 @@
        
         
     }
+
+ 
+
+    const images = [
+        'images/nbalogo.gif',
+        'images/vince.gif',
+        'images/harden.gif',
+        'images/luka.gif',
+        'images/kobe.gif',
+        'images/steph.gif',
+        'images/dame.gif',
+        'images/lebron.gif',
+        'images/jordan.gif',
+        'images/jokic.gif',
+        'images/kawhi.gif',
+        'images/kd.gif',
+        'images/trae.gif',
+        'images/vince2.gif',
+        'images/lebron2.gif',
+    ]
+
+    //-----generating random background---//
+    
+    function setRandomBackground() {
+        const randomImage = images[Math.floor(Math.random() * images.length)]
+        return `url(${randomImage})`
+    }
+    
+    function shuffleImages(array) {
+        let currentIndex = array.length;
+        let temp, randomIndex;
+        
+        while (currentIndex !== 0) {
+            randomIndex = Math.floor(Math.random() * currentIndex);
+            currentIndex--;
+            
+            temp = array[currentIndex];
+            array[currentIndex] = array[randomIndex]
+            array[randomIndex] = temp
+        }
+        
+        return array
+    }
+
+    shuffleImages(images)
+    
+    
+    images.forEach((path) => {
+        const cell = document.createElement('div')
+        cell.classList.add('image-cell')
+        cell.style.backgroundImage = `url(${path})`
+        imageGrid.appendChild(cell)
+        
+    })
+    
+    //-----changing background every 8 seconds---//
+    const imageCells = document.querySelectorAll('.image-cell')
+    console.log(document.querySelectorAll('.image-cell'))
+    
+    function updateCells() {
+        imageCells.forEach((cell) => {
+            cell.style.backgroundImage = setRandomBackground()
+        })
+    }
+    
+    
+    setInterval(() => {
+        updateCells()
+    }, 10000)
+    

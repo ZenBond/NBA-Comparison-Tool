@@ -9,16 +9,27 @@
     <link rel="stylesheet" href="main.css" />
   </head>
   <body>
-    <div id="big-container">
-      <div id="player-card" class="player-card">
-        <input type="text" id="input1" placeholder="Player 1" />
-        <div id="player-name"></div>
+    <div id="image-grid"></div>
+    <div class="sidebar">
+      <h1>NBA Comparison Tool</h1>
+    </div>
+    <div id="big-container" class="content">
+      <div id="player-container">
+        <div id="player-card" class="player-card">
+          <div id="player-name"></div>
+        </div>
+        <div id="player-card2" class="player-card">
+          <div id="player-name2"></div>
+        </div>
       </div>
-      <div id="player-card2" class="player-card">
-        <input type="text" name="" id="input2" placeholder="Player 2" />
-        <button id="compare">Compare</button>
-        <div id="player-name2"></div>
-      </div>
+    </div>
+
+    <div id="input-container">
+      <input type="text" id="input1" placeholder="Player 1" />
+      <input type="text" name="" id="input2" placeholder="Player 2" />
+    </div>
+    <div id="button-container">
+      <button id="compare">Compare</button>
       <button id="clear">Clear</button>
       <button id="top-scores">2023 Scoring Leaders</button>
     </div>
