@@ -4,3 +4,4 @@ NBA Player Comparison Tool
 This project allows you to compare your favorite NBA players statistics from the previous season.
 Tech used HTML, CSS, JAVASCRIPT, and Jquery.
 Integration of NBA API to make get requests.
+Full CRUD functionality on the front end.
