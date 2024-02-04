@@ -14,6 +14,8 @@
 
 • Dynamic Page Results
 
+• Music Player 👌
+
 # App Examples
 • Comparison Tool
 <img width="1465" alt="Screenshot 2024-02-04 at 10 24 01 AM" src="https://github.com/ZenBond/NBA-Comparison-Tool/assets/129324376/df535d7c-b5b0-485b-9f0b-3098b778d01b">
@@ -23,6 +25,7 @@
 ## Future Features
 • Bugs
 - No responsive design for mobile users.
+  
 • To Add 
 - Access to every NBA season and player that's played.
 - More statistic options and metrics to compare.
