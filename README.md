@@ -3,10 +3,15 @@
 # Overview - NBA Player Comparison Tool
 • Made using HTML, CSS, Javascript, jQuery, DOM manipulation.
 
+• API used: https://nba-stats-db.herokuapp.com
+
 # Info/Features 
 • This Front End Project allows you to compare your favorite NBA players' statistics from the previous season. 
+
 • It includes metrics for points, assists, rebounds, 3pt%, free throw %, and includes a color comparison feature. 
+
 • Alternating Image Background
+
 • Dynamic Page Results
 
 # App Examples
