@@ -6,7 +6,7 @@
 • API used: https://nba-stats-db.herokuapp.com
 
 # Info/Features 
-• This Front End Project allows you to compare your favorite NBA players' statistics from the previous season. 
+• This Front End Project allows you to compare your favorite NBA players' statistics from the 2022-2023 season. 
 
 • It includes metrics for points, assists, rebounds, 3pt%, free throw %, and includes a color comparison feature. 
 
