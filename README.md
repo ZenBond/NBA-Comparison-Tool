@@ -1,20 +1,18 @@
 <img width="1431" alt="NBA Comparison Tool" src="https://github.com/ZenBond/frontend-project/assets/129324376/ec768523-566f-4736-99d3-4c38a4220976">
 
 # Overview - NBA Player Comparison Tool
-• Made using HTML, CSS, Javascript, jQuery, DOM manipulation.
-
-• API used: https://nba-stats-db.herokuapp.com
+• This project is a dynamic Front End web application created using HTML, CSS, JavaScript, jQuery, and DOM manipulation. Leveraging the NBA Stats API available at https://nba-stats-db.herokuapp.com, the application allows users to compare statistics of NBA players during the 2022-2023 season.
 
 # Info/Features 
-• This Front End Project allows you to compare your favorite NBA players' statistics from the 2022-2023 season. 
+• Player Metrics: The application provides a comparison tool for various player metrics, including points, assists, rebounds, 3-point percentage, and free throw percentage.
 
-• It includes metrics for points, assists, rebounds, 3pt%, free throw %, and includes a color comparison feature. 
+• Unique Color Comparison Feature: A unique color comparison feature enhances the visualization of player statistics, offering users an intuitive way to analyze player performance.
 
-• Alternating Image Background
+•Alternating Image Backgrounds: The user experience is enriched with alternating image backgrounds, contributing to an engaging visual environment.
 
-• Dynamic Page Results
+•Real-Time Updates: Dynamic page results ensure that users receive real-time updates and seamless navigation throughout their exploration of player statistics.
 
-• Music Player 👌
+•Integration of Music Player: An innovative addition to the application is the integration of a music player, providing users with an enjoyable and personalized browsing experience while interacting with the NBA player data.
 
 # App Examples
 • Comparison Tool
