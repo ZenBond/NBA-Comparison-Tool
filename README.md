@@ -17,21 +17,26 @@
 # App Examples/ How To Use The Site
 • Player Search | Use the player input field to search player name then press 'Enter' to display card.
 
-- <img width="386" alt="Screenshot 2024-02-28 at 9 57 47 AM" src="https://github.com/ZenBond/NBA-Comparison-Tool/assets/129324376/fb0a01e5-a273-4ac3-b6fc-ee77dd5202d4">
+<img width="386" alt="Screenshot 2024-02-28 at 9 57 47 AM" src="https://github.com/ZenBond/NBA-Comparison-Tool/assets/129324376/fb0a01e5-a273-4ac3-b6fc-ee77dd5202d4">
 
-- <img width="620" alt="Screenshot 2024-02-28 at 10 00 29 AM" src="https://github.com/ZenBond/NBA-Comparison-Tool/assets/129324376/10a5f33e-4ba7-4da0-9b42-4718391710bf">
+- Player Cards will display
+  
+   <img width="620" alt="Screenshot 2024-02-28 at 10 00 29 AM" src="https://github.com/ZenBond/NBA-Comparison-Tool/assets/129324376/10a5f33e-4ba7-4da0-9b42-4718391710bf">
 
 • Comparison Tool | Once player cards are displayed select the compare tab to show color comparison.
 
-- <img width="801" alt="Screenshot 2024-02-28 at 10 01 40 AM" src="https://github.com/ZenBond/NBA-Comparison-Tool/assets/129324376/907ee85c-48e3-42c6-87ff-061a4ccac9ea">
+<img width="801" alt="Screenshot 2024-02-28 at 10 01 40 AM" src="https://github.com/ZenBond/NBA-Comparison-Tool/assets/129324376/907ee85c-48e3-42c6-87ff-061a4ccac9ea">
 
-- <img width="1465" alt="Screenshot 2024-02-04 at 10 24 01 AM" src="https://github.com/ZenBond/NBA-Comparison-Tool/assets/129324376/df535d7c-b5b0-485b-9f0b-3098b778d01b">
+-Color Comparison 
+  <img width="1465" alt="Screenshot 2024-02-04 at 10 24 01 AM" src="https://github.com/ZenBond/NBA-Comparison-Tool/assets/129324376/df535d7c-b5b0-485b-9f0b-3098b778d01b">
 
 • Scoring Leaders Table | Select 2023 Scoring Leaders to display scoring leaders table
 
-- <img width="617" alt="Screenshot 2024-02-28 at 10 02 15 AM" src="https://github.com/ZenBond/NBA-Comparison-Tool/assets/129324376/5f786dff-f416-44af-94ea-4a9b0aef7b7c">
+<img width="617" alt="Screenshot 2024-02-28 at 10 02 15 AM" src="https://github.com/ZenBond/NBA-Comparison-Tool/assets/129324376/5f786dff-f416-44af-94ea-4a9b0aef7b7c">
 
-- <img width="1470" alt="Screenshot 2024-02-04 at 10 24 32 AM" src="https://github.com/ZenBond/NBA-Comparison-Tool/assets/129324376/5c455ba7-1161-434d-af66-aec4db1d796c">
+- Display of scoring leaders. User can also select players from this list to display player cards.
+  
+  <img width="1470" alt="Screenshot 2024-02-04 at 10 24 32 AM" src="https://github.com/ZenBond/NBA-Comparison-Tool/assets/129324376/5c455ba7-1161-434d-af66-aec4db1d796c">
 
 • Music Player | Select this button to play music.
 
