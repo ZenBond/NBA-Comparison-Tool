@@ -27,7 +27,7 @@
 
 <img width="801" alt="Screenshot 2024-02-28 at 10 01 40 AM" src="https://github.com/ZenBond/NBA-Comparison-Tool/assets/129324376/907ee85c-48e3-42c6-87ff-061a4ccac9ea">
 
--Color Comparison 
+• Color Comparison Feature
   <img width="1465" alt="Screenshot 2024-02-04 at 10 24 01 AM" src="https://github.com/ZenBond/NBA-Comparison-Tool/assets/129324376/df535d7c-b5b0-485b-9f0b-3098b778d01b">
 
 • Scoring Leaders Table | Select 2023 Scoring Leaders to display scoring leaders table
