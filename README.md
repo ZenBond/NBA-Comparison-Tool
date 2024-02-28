@@ -33,6 +33,10 @@
 
 - <img width="1470" alt="Screenshot 2024-02-04 at 10 24 32 AM" src="https://github.com/ZenBond/NBA-Comparison-Tool/assets/129324376/5c455ba7-1161-434d-af66-aec4db1d796c">
 
+• Music Player | Select this button to play music.
+
+- <img width="76" alt="Screenshot 2024-02-28 at 10 06 17 AM" src="https://github.com/ZenBond/NBA-Comparison-Tool/assets/129324376/2ef736b6-ecca-4223-9f5b-93b829d8def4">
+
 ## Future Features
 • Bugs
 - No responsive design for mobile users.
